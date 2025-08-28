@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        ul{
+            margin-bottom:900px;
+            margin-top: 10px;
+            
+        }
+    </style>
+</head>
+<body style="background-color: rgb(224, 150, 237);">
+    <h2 style="color:black;text-align: center;"; >CLICK  ON  THE  IMAGES</h2>
+    <ul id="images">
+        <li class="img1"><img src="images/elsa.jpg" alt="" id="elsa" width="200px" ></li><br>
+        <li class="img2"><img src=" images/forest.jpg" alt="image" width="200px"></li><br>
+        <li class="img3"><img src="images/cherry.png" alt="" width="200px"></li>
+    </ul>
+</body>
+<script>
+    document.getElementById('elsa'). onclick = function(){
+        alert("elsa!");
+    }
+// when clicked on the img it dissapears
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        let removeIt=e.target.parentNode;
+        removeIt.remove()
+        
+    })
+</script>
+</html>

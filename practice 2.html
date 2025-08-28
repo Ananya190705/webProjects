@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            color: black;
+        }
+        #orange{
+            color: black;
+        }
+        #green{
+            color: black;
+        }
+        #purple{
+            color: black;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1 id="heads"> HEADING</h1>
+    <button onclick="evelistn()" class="btn">CLICK HERE</button> <!--evelistn() ia the function name i gave-->
+    <button id="orange">Orange</button>
+    <button id="green">green</button>
+    <button id="purple">purple</button>
+</body>
+<script>
+    
+    function evelistn(){
+        let ele=document.getElementById("heads");
+        ele.innerHTML="TEXT CHANGED";
+    }
+     
+    </script>
+    <script>
+        document.getElementById("orange").onclick=function(){
+        document.body.style.backgroundColor="orange"
+        }
+        document.getElementById("green").onclick=function(){
+        document.body.style.backgroundColor="green"
+    }
+    document.getElementById("purple").onclick=function(){
+        document.body.style.backgroundColor="purple"
+    }
+    </script>
+</html>

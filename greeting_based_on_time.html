@@ -1,0 +1,32 @@
+<!--"Good Morning" if the time is before 12 PM
+"Good Afternoon" if between 12 PM and 6 PM
+"Good Evening" otherwise.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+</head>
+<body style="text-align: center;">
+    <h1 id="greeting"></h1>
+</body>
+<script>
+    let date = new Date()
+    let hour = date.getHours();
+    console.log(hour);
+    let message
+    if(hour<12){
+        message="Good Morning"
+    }
+    else if(hour<18){
+        message="Good Afternoon"
+    }
+    else{
+        message="Good Evening"
+    }
+     document.getElementById("greeting").innerHTML = message;
+    
+</script>
+</html>
