@@ -1,0 +1,306 @@
+/* =======================
+   VARIABLES
+======================= */
+:root {
+    --navy: #001f3f;
+    --blue: #004aad;
+    --light-blue: #3a8bff;
+    --hover-blue: #002b80;
+    --bg-light: #eef2f7;
+    --text-dark: #333;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.12);
+    --glass: rgba(255, 255, 255, 0.4);
+    --blur: blur(10px);
+}
+
+/* =======================
+   GLOBAL STYLE
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+section {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+/* =======================
+   HEADER & NAVBAR
+======================= */
+header {
+    background: linear-gradient(to right, var(--navy), var(--blue));
+    color: var(--white);
+    text-align: center;
+    padding: 25px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    animation: fadeInDown .8s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--light-blue);
+    text-shadow: 0 2px 8px rgba(255,255,255,0.6);
+}
+
+/* =======================
+   BUTTONS
+======================= */
+button,
+.btn {
+    background: linear-gradient(135deg, var(--blue), var(--light-blue));
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px var(--shadow);
+    transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, var(--hover-blue), var(--blue));
+    box-shadow: 0 8px 15px var(--shadow);
+}
+
+/* =======================
+   HOME PAGE
+======================= */
+.home {
+    max-width: 700px;
+    margin: 70px auto;
+    text-align: center;
+    padding: 40px 35px;
+    background: var(--glass);
+    backdrop-filter: var(--blur);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 1px solid rgba(255,255,255,0.3);
+    animation: fadeIn 1s ease;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.07);
+}
+
+.home h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    color: var(--navy);
+}
+
+.home h2 span {
+    color: var(--light-blue);
+    font-weight: 700;
+}
+
+#extraInfo {
+    margin-top: 15px;
+    font-style: italic;
+    color: #333;
+    animation: fadeIn .6s ease;
+}
+
+/* =======================
+   RESUME PAGE
+======================= */
+.resume-page {
+    max-width: 920px;
+    margin: 50px auto;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 6px 20px var(--shadow);
+    border-left: 6px solid var(--blue);
+    animation: fadeInUp 0.9s ease;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.candidate-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.designation {
+    color: var(--blue);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+/* =======================
+   BIO-DATA TABLE
+======================= */
+.biodata {
+    max-width: 830px;
+    margin: 40px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--blue);
+    box-shadow: 0 7px 20px var(--shadow);
+}
+
+.biodata table {
+    width: 100%;
+}
+
+.biodata th {
+    background: var(--blue);
+    color: var(--white);
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
+.biodata td {
+    background: var(--white);
+    padding: 15px 20px;
+    color: #222;
+}
+
+.biodata tr:hover td {
+    background: #f1f6ff;
+}
+
+/* =======================
+   GENERIC TABLES
+======================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #d8e2ef;
+}
+
+th {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+tr:hover td {
+    background: #f4f8ff;
+}
+
+/* =======================
+   SECTION HEADINGS
+======================= */
+h3 {
+    color: var(--navy);
+    border-left: 5px solid var(--blue);
+    padding-left: 10px;
+    margin-top: 25px;
+    font-size: 1.3rem;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: var(--navy);
+    color: #dfe6f1;
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+    .home,
+    .biodata {
+        margin: 25px 10px;
+        padding: 25px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .resume-page {
+        padding: 25px;
+    }
+}
